@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Flask specific files
+instance/
+*.log
+
+# Pytest cache
+.pytest_cache/
+
+# Jupyter Notebook output
+*.ipynb
+
+# VS Code settings
+.vscode/
+
+# Ignore model files
+model/*.pkl
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
