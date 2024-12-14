@@ -47,6 +47,7 @@
 from flask import Flask, render_template, request
 import pickle
 import numpy as np
+import os
 
 # Load pickled models and data
 popular_df = pickle.load(open('model/popular.pkl', 'rb'))
@@ -107,5 +108,6 @@ def recommend():
         error_message = "An error occurred while processing your request. Please try again."
         return render_template('recommend.html', error=error_message)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Get PORT from the environment or use 5000 as default
+    app.run(host="0.0.0.0", port=port)
